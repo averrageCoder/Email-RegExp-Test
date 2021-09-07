@@ -7,7 +7,7 @@ public class RegexMain {
 
 	public static void main(String[] args) {
 
-		Pattern pattern = Pattern.compile("abc[.]*");
+		Pattern pattern = Pattern.compile("^abc[.]*");
 		Matcher matcher = pattern.matcher("abc@ d");
 		
 		boolean matchFound = matcher.find();
