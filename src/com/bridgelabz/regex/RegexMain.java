@@ -7,8 +7,8 @@ public class RegexMain {
 
 	public static void main(String[] args) {
 
-		Pattern pattern = Pattern.compile("^abc[A-Z0-9._+-]*@bridgelabz.co[A-Z0-9._%+-]*",Pattern.CASE_INSENSITIVE);
-		Matcher matcher = pattern.matcher("abc.xyz@bridgelabz.codsd");
+		Pattern pattern = Pattern.compile("^abc[A-Z0-9._+-]*@bridgelabz.co[A-Z0-9]*(.[A-Z0-9]{2})?$",Pattern.CASE_INSENSITIVE);
+		Matcher matcher = pattern.matcher("abc.xyz@bridgelabz.codsd.auf");
 		
 		boolean matchFound = matcher.find();
 		if(matchFound) {
